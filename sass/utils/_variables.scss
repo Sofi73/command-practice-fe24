@@ -1,0 +1,25 @@
+$colors: (
+  "white": #fff,
+  "red": #dd2242,
+  "blue": #010a20,
+  "textLighten": #e0e0e0,
+  "greyReduced": #85a3b2,
+  "lightText": rgba(21, 20, 57, 0.4),
+  "paragraph-dark": #6f7787,
+);
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+$fonts: (
+  "DM Sans": (
+    "DM Sans",
+    sans-serif,
+  ),
+  "FontAwesome": #{"FontAwesome",
+  sans-serif},
+  "Roboto": #{"Roboto",
+  sans-serif},
+);
+@function getFont($key) {
+  @return map-get($fonts, $key);
+}

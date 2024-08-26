@@ -1,0 +1,19 @@
+body {
+  font-family: getFont("DM Sans");
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  font-size: 18px;
+}
+.container {
+  max-width: 480px;
+  min-width: 320px;
+  width: 100%;
+  padding: 15px;
+  margin: 0 auto;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

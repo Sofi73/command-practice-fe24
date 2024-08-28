@@ -11,10 +11,7 @@ $colors: (
   @return map-get($colors, $key);
 }
 $fonts: (
-  "DM Sans": (
-    "DM Sans",
-    sans-serif,
-  ),
+  "DmSans": #{' "DM Sans", sans-serif'},
   "FontAwesome": #{"FontAwesome",
   sans-serif},
   "Roboto": #{"Roboto",

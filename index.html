@@ -151,30 +151,43 @@
       </section>
       <section class="explore">
         <div class="container">
-          <div>
-            <h2 class="explore-title">Explore Our Secrets</h2>
-            <div class="explore-img">
-              <a class="explore-svg" href="#">
-                <svg class="">
-                  <use></use>
+          <div class="explore-images">
+            <h2 class="explore__title">Explore Our Secrets</h2>
+            <div class="carousel-container">
+              <div class="carousel-mobile">
+              
+                <svg class="arrow-left">
+                  <use href="./images/svg/symbol-defs.svg#icon-ar-left"></use>
                 </svg>
-              </a>
+                <img class="carousel__img" srcset="./images/articles-2-desktop.jpeg 1x, ./images/articles-2-desktop@2x.jpg 2x " src="./images/articles-2-desktop.jpeg" alt="Palmes">
+              
+             
+                <svg class="arrow-right">
+                  <use href="./images/svg/symbol-defs.svg#icon-ar-right"></use>
+                </svg>
+          
+            </div>
+            <div class="carousel-desktop">
+              <svg class="arrow-left">
+                <use href="./images/svg/symbol-defs.svg#icon-ar-left"></use>
+              </svg>
               <ul class="explore-list">
                 <li class="explore-list__item">
-                  <img class="" src="./images/explore-1.jpeg" alt="№" />
+                  <img class="carousel__img"  srcset="./images/explore-1-desktop.jpeg 1x, ./images/explore-1-desktop@2x.jpg 2x" src="./images/explore-1-desktop.jpeg" alt="sea" />
                 </li>
                 <li class="explore-list__item">
-                  <img class="" src="./images/explore-2.jpeg" alt="№" />
+                  <img class="carousel__img"  srcset="./images/explore-2-desktop.jpeg 1x, ./images/explore-2-desktop@2x.jpg 2x" src="./images/explore-2-desktop.jpeg" alt="children" />
                 </li>
                 <li class="explore-list__item">
-                  <img class="" src="./images/explore-3.jpeg" alt="№" />
+                  <img class="carousel__img"  srcset="./images/explore-3-desktop.jpeg 1x, ./images/explore-3-desktop@2x.jpg 2x" src="./images/explore-3-desktop.jpeg" alt="beautiful image" />
                 </li>
               </ul>
-              <a class="explore-svg" href="#">
-                <svg class="">
-                  <use></use>
-                </svg>
-              </a>
+              <svg class="arrow-right">
+                <use href="./images/svg/symbol-defs.svg#icon-ar-right"></use>
+              </svg>
+              
+            </div>
+            <img class="carousel-point" src="./images/explore-secrets-pointers.png" alt="carousel-pointers">
             </div>
           </div>
           <div class="explore-rates">
@@ -184,24 +197,24 @@
               commodo magna et libero.Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-            <ul class="explore-list-rates">
-              <li class="explore-list-item">
-                <h3 class="explore-list-title">100+</h3>
-                <p class="explore-list-text">
+            <ul class="explore-rates-list">
+              <li class="explore-rates-list__item">
+                <h3 class="explore-rates-list__title">100+</h3>
+                <p class="explore-rates-list__text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
                   commodo magna et libero.
                 </p>
               </li>
-              <li class="explore-list-item">
-                <h3 class="explore-list-title">43,000+</h3>
-                <p class="explore-list-text">
+              <li class="explore-rates-list__item">
+                <h3 class="explore-rates-list__title">43,000+</h3>
+                <p class="explore-rates-list__text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
                   commodo.
                 </p>
               </li>
-              <li class="explore-list-item">
-                <h3 class="explore-list-title">30+</h3>
-                <p class="explore-list-text">
+              <li class="explore-rates-list__item">
+                <h3 class="explore-rates-list__title">30+</h3>
+                <p class="explore-rates-list__text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
                   commodo magna et libero.
                 </p>
@@ -210,7 +223,6 @@
           </div>
         </div>
       </section>
-
       <section class="hills">
         <div class="container">
           <h2 class="hills__title">

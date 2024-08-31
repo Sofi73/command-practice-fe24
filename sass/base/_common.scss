@@ -6,11 +6,16 @@ body {
   font-size: 18px;
 }
 .container {
+  width: 100%;
   max-width: 480px;
   min-width: 320px;
-  width: 100%;
-  padding: 15px;
+  padding: 0 15px;
   margin: 0 auto;
+
+  @media (min-width: 1024px) {
+    max-width: 1284px;
+    // max-width: 1488;
+  }
 }
 img {
   display: block;

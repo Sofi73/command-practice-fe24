@@ -1,0 +1,193 @@
+.backdrop {
+  width: 100%;
+  padding: 153px 0 0 0;
+
+  @media (min-width: 1200px) {
+    padding-top: 266px;
+    padding-left: 277px;
+  }
+
+  background-image: linear-gradient(
+    192.53deg,
+    rgba(0, 0, 0, 0.31) 29.671%,
+    rgba(0, 0, 0, 0.29) 84.194%
+  );
+}
+.hero .container {
+  @media (min-width: 1200px) {
+    max-width: 100%;
+    margin: 0 0 0 0;
+    padding-right: 0;
+  }
+  @media (min-width: 1925px) {
+    padding-right: 15px;
+  }
+}
+.hero {
+  background-image: url("../images/hero-bkg-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 0.020833333333333332),
+    (-o-min-device-pixel-ratio: 1/48),
+    (min-resolution: 2dpi),
+    (-webkit-min-device-pixel-ratio: 192),
+    (-o-min-device-pixel-ratio: 192/1),
+    (min-resolution: 192dppx) {
+    background-image: url("../../images/hero-bkg-mobile@2x.jpg");
+  }
+
+  @media (min-width: 1200px) {
+    background-image: url("../images/hero-bkg-desktop.jpeg");
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 0.020833333333333332),
+      (-o-min-device-pixel-ratio: 1/48),
+      (min-resolution: 2dpi),
+      (-webkit-min-device-pixel-ratio: 192),
+      (-o-min-device-pixel-ratio: 192/1),
+      (min-resolution: 192dppx) {
+      background-image: url("../../images/hero-bkg-desktop@2x.jpg");
+    }
+  }
+  &__title {
+    max-width: 314px;
+    color: getColor("white");
+    font-family: getFont("Roboto");
+    font-weight: 900;
+    font-size: 58px;
+    line-height: 108%;
+    text-transform: uppercase;
+
+    @media (min-width: 1200px) {
+      font-size: 120px;
+      max-width: 627px;
+    }
+  }
+  &__btn {
+    width: 100%;
+    border-radius: 211px;
+    padding: 21px 90px;
+    background-color: getColor("red");
+    margin: 8px 0 54px;
+
+    color: getColor("white");
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 150%;
+    text-align: center;
+
+    @media (min-width: 1200px) {
+      max-width: 273px;
+      padding: 26px 64px;
+      margin: 21px 0 241px;
+    }
+  }
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1200px) {
+      height: 254px;
+      position: relative;
+      justify-content: flex-end;
+      align-items: flex-end;
+      flex-direction: row;
+    }
+  }
+}
+.hero-list {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 35px 32px 35px 32px;
+  @media (min-width: 1200px) {
+    max-width: 1255px;
+    max-height: 210px;
+
+    padding: 41px 71px;
+    flex-direction: row;
+  }
+  @media (min-width: 1024px) {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  &__item {
+    max-width: 210px;
+  }
+
+  &__span {
+    color: getColor("red");
+    font-family: getFont("Roboto");
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 19px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-top: 14px;
+    color: getColor("white");
+    font-family: getFont("DM Sans");
+    font-size: 26.41px;
+    font-weight: 700;
+    line-height: 41.08px;
+  }
+
+  &__text {
+    color: #939393;
+    font-family: getFont("DM Sans");
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+  }
+}
+.hero-video-container {
+  width: 100%;
+  align-self: flex-start;
+  min-width: 290px;
+
+  @media (min-width: 1200px) {
+    max-width: 417px;
+  }
+  &__video {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    @media (min-width: 768px) {
+      height: 254px;
+    }
+  }
+
+  &__play {
+    display: none;
+    // position: absolute;
+    // top: 66px;
+    // left: 105px;
+    // width: 78px;
+    // height: 78px;
+    // border-radius: 50%;
+    // box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.5);
+    // background-color: getColor("white");
+
+    // @media (min-width: 1200px) {
+    //   top: 88px;
+    //   left: 170px;
+    // }
+  }
+
+  // &__play-svg {
+  //   width: 25px;
+  //   height: 25px;
+  //   fill: #000;
+  // }
+}

@@ -1,0 +1,23 @@
+@mixin btn($color, $bg-color, $font-s, $br, $font-w, $pad) {
+  color: $color;
+  background-color: $bg-color;
+  font-size: $font-s;
+  border-radius: $br;
+  font-weight: $font-w;
+  padding: $pad;
+}
+@mixin text($color, $font-s, $font-w, $line-h, $letter-s) {
+  color: $color;
+  font-size: $font-s;
+  font-weight: $font-w;
+  line-height: $line-h;
+  letter-spacing: $letter-s;
+}
+@mixin flex($direction, $wrap, $align, $justify, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}

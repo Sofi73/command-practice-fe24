@@ -23,38 +23,42 @@
   <body>
     <header class="header">
       <div class="container">
-        <a href="./index.html" class="logo logo--header">
-          <svg class="logo-icon">
-            <use></use>
-          </svg>
-          <span class="logo-span"> explore indonesia </span>
-        </a>
-        <nav class="navigation">
-          <ul class="nav-list">
-            <li class="nav-list__item">
-              <a href="#" class="nav-list__link">destinations</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="#" class="nav-list__link">experiences</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="#" class="nav-list__link">about</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="#" class="nav-list__link">gallery</a>
-            </li>
-          </ul>
-        </nav>
-        <button class="search-btn">
-          <svg class="search-btn__icon">
-            <use></use>
-          </svg>
-        </button>
-        <button class="menu-btn">
-          <svg class="menu-btn__icon">
-            <use></use>
-          </svg>
-        </button>
+        <div class="header__pages">
+          <a href="./index.html" class="logo logo--header">
+            <svg class="logo-icon">
+              <use href="./images/svg/symbol-defs.svg#icon-rose"></use>
+            </svg>
+            <span class="logo__span"> explore indonesia </span>
+          </a>
+          <nav class="navigation">
+            <ul class="nav-list">
+              <li class="nav-list__item">
+                <a href="#" class="nav-list__link">destinations</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#" class="nav-list__link">experiences</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#" class="nav-list__link">about</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#" class="nav-list__link">gallery</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-btn-container">
+          <button class="search-btn">
+            <svg class="search-btn__icon">
+              <use href="./images/svg/symbol-defs.svg#icon-search"></use>
+            </svg>
+          </button>
+          <button class="menu-btn">
+            <svg class="menu-btn__icon">
+              <use href="./images/svg/symbol-defs.svg#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -64,6 +68,7 @@
           <div class="container">
             <h1 class="hero__title">explore indonesia</h1>
             <button class="hero__btn" type="button">Start travelling</button>
+
             <div class="hero__container">
               <ul class="hero-list">
                 <li class="hero-list__item">
@@ -88,21 +93,21 @@
                   </p>
                 </li>
               </ul>
-            </div>
-            <div class="hero-video-container">
-              <iframe
-                class="hero-video-container__video"
-                src="https://www.youtube.com/embed/teLKdgOOlhs"
-                title="Indonesia In 4K - Tropical Paradise Of Asia | Scenic Relaxation Film"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-              <div class="hero-video-container__play">
-                <svg class="hero-video-container__play-svg">
-                  <use href="./"></use>
-                </svg>
+              <div class="hero-video-container">
+                <iframe
+                  class="hero-video-container__video"
+                  src="https://www.youtube.com/embed/teLKdgOOlhs"
+                  title="Indonesia In 4K - Tropical Paradise Of Asia | Scenic Relaxation Film"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+                <button type="button" class="hero-video-container__play">
+                  <svg class="hero-video-container__play-svg">
+                    <use href="./images/svg/symbol-defs.svg#icon-playbtn"></use>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>

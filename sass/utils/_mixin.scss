@@ -1,23 +1,21 @@
-@mixin btn($color, $bg-color, $font-s, $br, $font-w, $pad) {
-  color: $color;
+@mixin btn($bg-color:rgb(221, 34, 66), $cl:#fff,$br:32px, $pad...) {
   background-color: $bg-color;
-  font-size: $font-s;
+  color: $cl;
   border-radius: $br;
-  font-weight: $font-w;
   padding: $pad;
 }
-@mixin text($color, $font-s, $font-w, $line-h, $letter-s) {
-  color: $color;
+
+@mixin text($font-s:16px, $font-w:400, $line-h:1.56, $letter-s:0.5px) {
   font-size: $font-s;
   font-weight: $font-w;
   line-height: $line-h;
   letter-spacing: $letter-s;
 }
-@mixin flex($direction, $wrap, $align, $justify, $gap) {
+
+@mixin flex($direction:row, $wrap:wrap, $align:flex-start, $justify:flex-start) {
   display: flex;
   flex-direction: $direction;
   flex-wrap: $wrap;
   align-items: $align;
   justify-content: $justify;
-  gap: $gap;
 }

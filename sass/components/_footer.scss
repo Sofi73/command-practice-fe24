@@ -1,0 +1,140 @@
+.footer {
+  position: relative;
+  &-left {
+    @include flex(column, $wrap, center, $justify);
+    @media screen and (min-width: 1200px) {
+      @include flex(row, $wrap, $align, $justify);
+      gap: 124px;
+    }
+  }
+  &-right {
+    @include flex(column, $wrap, center, $justify);
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      @include flex(row, $wrap, $align, $justify);
+      gap: 55px;
+    }
+  }
+  .container {
+    background-color: getColor("blue");
+    padding: 15px;
+    @include flex(column, $wrap, center, center);
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 42px 15px;
+    }
+  }
+}
+.logo {
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+    margin-top: 0;
+  }
+  margin-top: 83px;
+  color: getColor("white");
+  @include flex($direction, $wrap, end, center);
+  &-text {
+    @include flex(column, $wrap, $align, $justify);
+    text-transform: uppercase;
+    font-family: getFont("Roboto");
+    @include text(getColor("white"), 24px, 900, 90.5%, 0.32px, left);
+    padding-left: 8px;
+    &--red {
+      color: getColor("red");
+    }
+  }
+}
+.logo-icon,
+.footer-icon,
+.icon-up {
+  fill: getColor("white");
+}
+.footer-info {
+  padding-top: 50px;
+  padding-bottom: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include flex(column, $wrap, center, center);
+  gap: 48px;
+  @media screen and (min-width: 1200px) {
+    gap: 36px;
+    flex-direction: row;
+    padding: 0;
+  }
+  &__text {
+    color: getColor("white");
+    font-family: getFont("DmSans");
+    @include text(getColor("white"), 23px, 700, 36px, 0.64px, center);
+    @media screen and (min-width: 1200px) {
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+.footer-social {
+  display: flex;
+  align-items: center;
+  @include flex($direction, $wrap, center, $justify);
+  gap: 48px;
+  @media screen and (min-width: 1200px) {
+    gap: 22px;
+  }
+  .footer-icon {
+    &--fb {
+      @media screen and (min-width: 1200px) {
+        width: 8px;
+        height: 15px;
+      }
+    }
+    &--ld {
+      @media screen and (min-width: 1200px) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &--g {
+      @media screen and (min-width: 1200px) {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+}
+.footer-copyright {
+  padding-top: 31px;
+  padding-bottom: 83px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 138px;
+    padding: 0;
+  }
+  &__text {
+    color: #fff;
+    font-family: getFont("DmSans");
+    @include text(23px, 700, 36.15px, 0.65px, $text-align);
+    @media screen and (min-width: 1200px) {
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+.footer-up {
+  @include flex($direction, $wrap, center, center);
+  position: absolute;
+  top: -52px;
+  width: 104px;
+  height: 104px;
+  border: none;
+  cursor: pointer;
+  background-color: getColor("red");
+  border-radius: 50%;
+  @media screen and (min-width: 1200px) {
+    right: 99px;
+  }
+}

@@ -1,28 +1,25 @@
 .footer {
   position: relative;
   &-left {
-    @include flex(column, $wrap, center, $justify);
+    @include flex($directon: column, $align: center);
     @media screen and (min-width: 1200px) {
-      @include flex(row, $wrap, $align, $justify);
+      @include flex($directon: row);
       gap: 124px;
     }
   }
   &-right {
-    @include flex(column, $wrap, center, $justify);
+    @include flex($directon:column, $align: center, );
     @media screen and (min-width: 1200px) {
-      display: flex;
-      flex-direction: row;
-      @include flex(row, $wrap, $align, $justify);
+      @include flex($directon: row);
       gap: 55px;
     }
   }
   .container {
     background-color: getColor("blue");
     padding: 15px;
-    @include flex(column, $wrap, center, center);
+    @include flex($directon: column, $align: center, $justify: center);
     @media screen and (min-width: 1200px) {
-      flex-direction: row;
-      justify-content: space-between;
+      @include flex($justify: space-between);
       padding: 42px 15px;
     }
   }
@@ -34,9 +31,9 @@
   }
   margin-top: 83px;
   color: getColor("white");
-  @include flex($direction, $wrap, end, center);
+  @include flex($align: end, $justify: center);
   &-text {
-    @include flex(column, $wrap, $align, $justify);
+    @include flex($directon: column);
     text-transform: uppercase;
     font-family: getFont("Roboto");
     @include text(getColor("white"), 24px, 900, 90.5%, 0.32px, left);
@@ -54,12 +51,7 @@
 .footer-info {
   padding-top: 50px;
   padding-bottom: 36px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  @include flex(column, $wrap, center, center);
+  @include flex($directon: column, $align: center, $justify: center);
   gap: 48px;
   @media screen and (min-width: 1200px) {
     gap: 36px;
@@ -80,7 +72,7 @@
 .footer-social {
   display: flex;
   align-items: center;
-  @include flex($direction, $wrap, center, $justify);
+  @include flex($align: center);
   gap: 48px;
   @media screen and (min-width: 1200px) {
     gap: 22px;
@@ -125,7 +117,7 @@
   }
 }
 .footer-up {
-  @include flex($direction, $wrap, center, center);
+  @include flex($align: center, $justify: center);
   position: absolute;
   top: -52px;
   width: 104px;

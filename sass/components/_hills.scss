@@ -1,48 +1,90 @@
-// .hills{
-//     display: block;
-//     &__title{
-//         position: absolute;
-// width: 614px;
-// height: 100px;
-// left: 33.75%;
-// right: 34.52%;
-// top: 5160px;
-// bottom: -4438px;
-// color: rgb(0, 0, 0);
-// font-family: DM Sans;
-// font-size: 42px;
-// font-weight: 700;
-// line-height: 50px;
-// letter-spacing: 0px;
-// text-align: center;
-//     }
-//     &__text{
-//         position: absolute;
-// width: 470px;
-// height: 84px;
-// left: 37.47%;
-// right: 38.24%;
-// top: 5292px;
-// bottom: -4554px;
-// color: rgb(111, 119, 135);
-// font-family: DM Sans;
-// font-size: 18px;
-// font-weight: 400;
-// line-height: 28px;
-// letter-spacing: 0.5px;
-// text-align: center;
-//     }
-//     &__btn{
-//         position: relative;
-// width: 210px;
-// height: 64px;
-// display: flex;
-// flex-direction: row;
-// justify-content: center;
-// align-items: center;
-// gap: 24;
-// padding: 16px 24px 16px 24px;
-// border-radius: 122px;
-// background: rgb(221, 34, 66);
-//     }
-// }
+.hills .container {
+    padding: 175px 30px 105px;
+
+    @media (min-width:1200px) {
+        padding: 250px 30px 250px;
+    }
+
+}
+
+.hills {
+    position: relative;
+    background-color: #fff;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+
+
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        width: 330px;
+        height: 130px;
+        background-image: url("../../images/hills2.png");
+
+        @media (min-width:1200px) {
+            width: 565px;
+            height: 810px;
+            background-image: url("../../images/hills1-desktop.png");
+        }
+    }
+
+    &::after {
+        right: 0;
+        bottom: 0;
+        width: 375px;
+        height: 210px;
+        background-image: url("../../images/hills-line2-mobile.png");
+
+        @media (min-width:1200px) {
+            width: 770px;
+            height: 496px;
+            background-image: url("../../images/hills-line2-desk.png");
+        }
+    }
+
+    &__title {
+        color: black;
+        margin-bottom: 36px;
+        font-family: getFont("DM Sans");
+        @include text(40px, 700, 50px, 0px, center);
+
+        @media (min-width:1200px) {
+            margin: 0 auto 32px;
+            font-size: 42px;
+            max-width: 614px;
+        }
+    }
+
+    &__text {
+        color: rgb(111, 119, 135);
+        font-family: getFont("DM Sans");
+        margin-bottom: 41px;
+        
+        @include text(16px, 400, 28px, $text-align: center);
+
+        @media (min-width:1200px) {
+            margin: 0 auto 36px;
+            font-size: 18px;
+            max-width: 470px;
+        }
+    }
+
+    &__btn {
+        @include btn(rgb(221, 34, 66), #fff, 122px, 23px 108px);
+        @include text(18px, 700, 1.5, 0, center);
+        margin: 0 auto;
+
+        @media (min-width:1200px) {
+            @include btn(rgb(221, 34, 66), #fff, 122px, 19px 56px);
+        }
+
+    }
+}

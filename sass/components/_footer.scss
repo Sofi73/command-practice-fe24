@@ -1,25 +1,25 @@
 .footer {
   position: relative;
   &-left {
-    @include flex($directon: column, $align: center);
+    @include flex($direction: column, $align: center);
     @media screen and (min-width: 1200px) {
-      @include flex($directon: row);
+      @include flex($direction: row, $align: center);
       gap: 124px;
     }
   }
   &-right {
-    @include flex($directon:column, $align: center, );
+    @include flex($direction: column, $align: center);
     @media screen and (min-width: 1200px) {
-      @include flex($directon: row);
+      @include flex($direction: row, $align: center);
       gap: 55px;
     }
   }
   .container {
     background-color: getColor("blue");
     padding: 15px;
-    @include flex($directon: column, $align: center, $justify: center);
+    @include flex($direction: column, $align: center, $justify: center);
     @media screen and (min-width: 1200px) {
-      @include flex($justify: space-between);
+      @include flex($justify: space-between, $align: center);
       padding: 42px 15px;
     }
   }
@@ -33,10 +33,10 @@
   color: getColor("white");
   @include flex($align: end, $justify: center);
   &-text {
-    @include flex($directon: column);
+    @include flex($direction: column);
     text-transform: uppercase;
     font-family: getFont("Roboto");
-    @include text(getColor("white"), 24px, 900, 90.5%, 0.32px, left);
+    @include text(24px, 900, 90.5%, 0.32px, left);
     padding-left: 8px;
     &--red {
       color: getColor("red");
@@ -51,7 +51,7 @@
 .footer-info {
   padding-top: 50px;
   padding-bottom: 36px;
-  @include flex($directon: column, $align: center, $justify: center);
+  @include flex($direction: column, $align: center, $justify: center);
   gap: 48px;
   @media screen and (min-width: 1200px) {
     gap: 36px;
@@ -61,7 +61,7 @@
   &__text {
     color: getColor("white");
     font-family: getFont("DmSans");
-    @include text(getColor("white"), 23px, 700, 36px, 0.64px, center);
+    @include text(23px, 700, 36px, 0.64px, center);
     @media screen and (min-width: 1200px) {
       font-size: 18px;
       line-height: 28px;
@@ -79,6 +79,7 @@
   }
   .footer-icon {
     &--fb {
+      @media screen and (min-width: 1200px) {
         width: 8px;
         height: 15px;
       }
@@ -107,7 +108,12 @@
   &__text {
     color: #fff;
     font-family: getFont("DmSans");
-    @include text(23px, 700, 36.15px, 0.65px, $text-align);
+    @include text(
+      $font-s: 23px,
+      $font-w: 700,
+      $line-h: 36.15px,
+      $letter-s: 0.65px
+    );
     @media screen and (min-width: 1200px) {
       font-size: 18px;
       line-height: 28px;

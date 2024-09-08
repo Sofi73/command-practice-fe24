@@ -106,14 +106,9 @@
     padding: 0;
   }
   &__text {
-    color: #fff;
+    color: getColor("white");
     font-family: getFont("DmSans");
-    @include text(
-      $font-s: 23px,
-      $font-w: 700,
-      $line-h: 36.15px,
-      $letter-s: 0.65px
-    );
+    @include text(23px, 700, 36.15px, 0.65px);
     @media screen and (min-width: 1200px) {
       font-size: 18px;
       line-height: 28px;

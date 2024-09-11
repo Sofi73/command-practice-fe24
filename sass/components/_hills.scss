@@ -9,17 +9,15 @@
 
 .hills {
     position: relative;
-    background-color: #fff;
+
 
     &::before,
     &::after {
         content: "";
+        z-index: -1;
         position: absolute;
         background-repeat: no-repeat;
         background-size: cover;
-
-
-
     }
 
     &::before {
@@ -41,7 +39,7 @@
         bottom: 0;
         width: 375px;
         height: 210px;
-        background-image: url("../../images/hills-line2-mobile.png");
+        background-image: url("../../images/hills-line2-desk.png");
 
         @media (min-width:1200px) {
             width: 770px;
@@ -67,7 +65,7 @@
         color: rgb(111, 119, 135);
         font-family: getFont("DM Sans");
         margin-bottom: 41px;
-        
+
         @include text(16px, 400, 28px, $text-align: center);
 
         @media (min-width:1200px) {

@@ -37,7 +37,7 @@
   @include flex(row, wrap, flex-start, center);
   display: flex;
   gap: 13px;
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     flex-wrap: wrap;
       gap: 20px;
     }
@@ -48,7 +48,7 @@
   &__item {
     @include flex(column, wrap);
     gap: 12px;
-    @media (min-width: 1024px) {
+    @media (min-width: 1200px) {
       gap: 20px;
     }
     @media (min-width: 1200px) {
@@ -69,7 +69,7 @@
   &__img{
     width: 100%;
     max-width: 151px;
-    @media (min-width: 1024px) {
+    @media (min-width: 1200px) {
       max-width: 275px;
     }
     @media (min-width: 1200px) {

@@ -1,5 +1,7 @@
 .footer {
+  background-color: getColor("blue");
   position: relative;
+  width: 100%;
   &-left {
     @include flex($direction: column, $align: center);
     @media screen and (min-width: 1200px) {
@@ -15,7 +17,6 @@
     }
   }
   .container {
-    background-color: getColor("blue");
     padding: 15px;
     @include flex($direction: column, $align: center, $justify: center);
     @media screen and (min-width: 1200px) {
@@ -25,13 +26,15 @@
   }
 }
 .logo {
-  @media screen and (min-width: 1200px) {
-    margin-left: 70px;
-    margin-top: 0;
-  }
-  margin-top: 83px;
-  color: getColor("white");
   @include flex($align: end, $justify: center);
+  &--footer {
+    color: getColor("white");
+    margin-top: 83px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 70px;
+      margin-top: 0;
+    }
+  }
   &-text {
     @include flex($direction: column);
     text-transform: uppercase;

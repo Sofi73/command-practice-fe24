@@ -1,0 +1,108 @@
+.life .container {
+    padding: 83px 30px 38px;
+  
+    @media (min-width: 1200px) {
+      padding: 141px 30px 255px;
+    }
+  }
+  .life {
+    background-color: getColor("blue");
+    background-image: url("../images/life-bkg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../images/life-bkg-desktop@2x.png");
+    }
+  
+    &__title {
+      @include text(40px, 700, 1.15, $text-align: center);
+      font-family: getFont("DM Sans");
+  
+      color: getColor("white");
+  
+      margin-bottom: 115px;
+  
+      @media (min-width: 1200px) {
+        font-size: 42px;
+        line-height: 1.1;
+        max-width: 1056px;
+      }
+    }
+  }
+  
+  .video-container {
+    max-width: 314px;
+    height: 192px;
+  
+    margin: 0 auto 32px;
+    @media (min-width: 1200px) {
+      margin: 0 auto 112px;
+      max-width: 1056px;
+      height: 594px;
+    }
+  
+    &__video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .life-list {
+    @include flex(column, center, center);
+  
+    gap: 40px;
+    align-items: center;
+    @media (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @media (min-width: 1200px) {
+        flex-direction: row;
+        gap: 42px;
+      }
+    }
+    &__video-container {
+      max-width: 314px;
+      margin-bottom: 40px;
+      @media (min-width: 1200px) {
+        margin-bottom: 0;
+      }
+    }
+  
+    &__box {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-left: 0;
+      @media (min-width: 1200px) {
+        max-width: 213px;
+      }
+    }
+    &__title {
+      @include text(22px, 700, 1.5, $text-align: center);
+      font-family: getFont("DM Sans");
+  
+      color: getColor("white");
+      @media (min-width: 1200px) {
+        font-size: 18px;
+      }
+    }
+    &__info {
+      @include text(40px, 400, 1.5, $text-align: center);
+      font-family: getFont("DM Sans");
+      color: getColor("paragraph-dark");
+      @media (min-width: 1200px) {
+        font-size: 18px;
+      }
+    }
+  }
+  

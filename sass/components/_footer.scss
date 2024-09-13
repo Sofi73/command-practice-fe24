@@ -1,6 +1,7 @@
 .footer {
   background-color: getColor("blue");
   position: relative;
+  width: 100%;
   &-left {
     @include flex($direction: column, $align: center);
     @media screen and (min-width: 1200px) {

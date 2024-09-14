@@ -21,6 +21,7 @@
             @include btn(rgb(221, 34, 66), #fff, 50px, 19px 56px);
             margin-top: 17px;
             @include text(18px, 700, 1.5);
+            margin-left: 100px;
         }
     }
 }
@@ -28,6 +29,8 @@
 .information-list{
     @include flex(column, center, center);
     gap: 32px;
+    position: relative;
+    z-index: 1;
     @media (min-width:1200px) {
         gap: 80px;
     }
@@ -40,8 +43,12 @@
         }
     }
     &__title{
-        @include text(26px, 700, 1.56, $text-align: center);
-    margin-top: 20px;
+        @include text(22px, 700, 1.56, $text-align: center);
+    margin: 0 auto 13px;
+    @media (min-width: 1200px) {
+        display: flex;
+        justify-content: start;
+    }
     }
     &__input{
         display: none;
@@ -72,22 +79,38 @@
         font-weight: 400;
         font-size: 16px;
         letter-spacing: 0.5px;
+        // line-height: ;
         color:getColor('red');
-         margin-bottom: 32px; 
     }
     &__description-desktop{
         display: none;
          font-weight: 400;
-         font-size: 24px;
+         font-size: 16px;
         letter-spacing: 0px;
+        text-align: center;
         color:getColor('lightText');
         @media (min-width: 1200px) {
             display: block;
+            font-size: 24px;
+            text-align: left;
         }
     }
     &__img{
         width: 56px;
         height: 56px;
+    }
+    &::before{
+        content: "";
+        @media (min-width: 1200px) {
+            width: 3px;
+            height: 90%;
+            background-color:getColor('lightText');
+            position: absolute;
+            left: 28px;
+            top: 0;
+            z-index: -1;
+            opacity: 0.3;
+        }
     }
 }
 
@@ -96,7 +119,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     gap: 45px;
+    @media (min-width: 1200px) {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
     &__video{
         margin-top: 32px;
         width: 314px;
@@ -114,13 +142,15 @@
         display: block;
         margin-bottom: 12px;
         text-align: center;
+        justify-content: start;
     }
     }
     &__description-desktop{
         display: none;
         font-weight: 400;
     font-size: 23px;
-    line-height: 0px;
+    line-height: 1.62px;
+    letter-spacing: 0.5px;
     color:getColor('lightText');
     @media (min-width: 1200px) {
         display: block;

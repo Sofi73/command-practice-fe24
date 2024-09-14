@@ -16,12 +16,13 @@
       gap: 55px;
     }
   }
-  .container {
+  & .container {
     padding: 15px;
     @include flex($direction: column, $align: center, $justify: center);
     @media screen and (min-width: 1200px) {
       @include flex($justify: space-between, $align: center);
       padding: 42px 15px;
+      max-width:1688px;
     }
   }
 }

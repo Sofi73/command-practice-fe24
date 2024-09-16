@@ -1,48 +1,63 @@
 .articles .container {
   padding: 40px 30px 48px;
-  background-color: black;
 
   @media (min-width: 1024px) {
     padding: 207px 30px 241px;
   }
 }
+.articles {
+  background-image: url(../../images/articles-bg@1x.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.articles-list__title {
-  margin-bottom: 16px;
-  color: getColor("white");
-  font-family: getFont("DM Sans");
-  @include text(42px, 700);
-}
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 0.020833333333333332),
+    (-o-min-device-pixel-ratio: 1/48),
+    (min-resolution: 2dpi),
+    (-webkit-min-device-pixel-ratio: 192),
+    (-o-min-device-pixel-ratio: 192/1),
+    (min-resolution: 192dppx) {
+    background-image: url("../../images/articles-bg@2x.jpg");
+  }
 
-.articles-list__text {
-  margin-bottom: 36px;
-  color: getColor("textLighten");
-  font-family: getFont("DM Sans");
-  @include text(18px, 400);
-}
+  &-list__title {
+    margin-bottom: 16px;
+    color: getColor("white");
+    font-family: getFont("DM Sans");
+    @include text(42px, 700);
+  }
+  
+  &-list__text {
+    margin-bottom: 36px;
+    color: getColor("textLighten");
+    font-family: getFont("DM Sans");
+    @include text(18px, 400);
+  }
+  
+  &-list__button {
+    width: 100%;
+    padding: 22px 109px;
+    background-color: getColor("red");
+    border-radius: 211px;
+  
+    color: getColor("white");
+    font-family: getFont("DmSans");
+  
+    @include text(18px, 700, $text-align: center);
+  }
+  
+  &-list__image {
+    border-radius: 20px;
+    width: 314px;
+    height: 232px;
+  }
 
-.articles-list__button {
-  width: 100%;
-  padding: 22px 109px;
-  background-color: getColor("red");
-  border-radius: 211px;
-
-  color: getColor("white");
-  font-family: getFont("DmSans");
-
-  @include text(18px, 700, $text-align: center);
-}
-
-.articles-list__image {
-  border-radius: 20px;
-  width: 314px;
-  height: 232px;
-
-  @media (min-width: 1024px) {
-    width: 630px;
-    height: 460px;
+  &-list__image:nth-child(even) {
+    order: 2;
   }
 }
+
 
 @media (min-width: 1024px) {
   .articles-list {
@@ -61,6 +76,10 @@
     }
     &__button {
       padding: 16px 40px;
+    }
+    &__image {
+      width: 630px;
+      height: 460px;
     }
   }
 }

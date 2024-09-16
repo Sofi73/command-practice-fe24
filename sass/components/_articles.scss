@@ -22,7 +22,8 @@
   }
 
   &-list__title {
-    margin: 34px 0 16px;
+    margin-top: 34px;
+    margin-bottom: 16px;
     color: getColor("white");
     font-family: getFont("DM Sans");
     @include text(42px, 700);
@@ -49,13 +50,9 @@
   }
   
   &-list__image {
-    border-radius: 20px;
+    border-radius: 10px;
     width: 314px;
     height: 232px;
-  }
-
-  &-list__image:nth-child(even) {
-    order: 2;
   }
 }
 
@@ -63,18 +60,23 @@
 @media (min-width: 1024px) {
   .articles-list {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 192px;
     &__item {
       flex: 0 1 50%;
       margin-bottom: 190px;
     }
     &__weekend {
       display: flex;
+      gap: 125px;
     }
     &__body {
       gap: 125px;
     }
     &__button {
+      width: 45%;
       padding: 16px 40px;
     }
     &__image {

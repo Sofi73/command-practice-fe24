@@ -117,7 +117,7 @@
 .explore-rates {
   &__title {
       color: #fff;
-  font-size: 60px;
+  font-size: 40px;
   font-style: normal;
   margin-top: 0;
   text-align: center;
@@ -127,11 +127,14 @@
   margin-bottom: 0;
   letter-spacing: 0;
   text-transform: none;
+  @media (min-width:1200px) {
+    font-size: 42px;
+  }
   }
 
   &__description {
       color: getColor("textLighten");
-      font-size: 18px;
+      font-size: 16px;
       font-style: normal;
       font-family: getFont("DmSans");
       font-weight: 400;
@@ -139,6 +142,9 @@
       letter-spacing: .5px;
       text-transform: none;
       text-align: center;
+      @media (min-width:1200px) {
+        font-size: 18px;
+      }
   }
 }
 
@@ -155,23 +161,29 @@
 .explore-rates-list {
   &__title {
     color: getColor("red");
-  font-size: 42.137489318847656px;
+  font-size: 40px;
   font-style: normal;
   font-family: getFont("DmSans");
   font-weight: 700;
   line-height: 49px;
+  @media (min-width:1200px) {
+    font-size: 43px;
+  }
   
   }
 
   &__text {
     color: getColor("textLighten");
-      font-size: 18px;
+      font-size: 16px;
       font-style: normal;
       font-family: "DM Sans",sans-serif;
       font-weight: 400;
       line-height: 28px;
       letter-spacing: .5px;
       text-transform: none;
+      @media (min-width:1200px) {
+        font-size: 18px;
+      }
   }
 
 }

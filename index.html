@@ -53,7 +53,11 @@
               <use href="./images/svg/symbol-defs.svg#icon-search"></use>
             </svg>
           </button>
-          <button class="menu-btn">
+          <button
+            class="menu-btn menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
             <svg class="menu-btn__icon">
               <use href="./images/svg/symbol-defs.svg#icon-menu"></use>
             </svg>
@@ -604,5 +608,41 @@
         </a>
       </div>
     </footer>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          class="menu__icon"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <ul class="menu-nav">
+        <li class="menu-nav__item">
+          <a href="#" class="menu-nav__link">destinations</a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="#" class="menu-nav__link">experiences</a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="#" class="menu-nav__link">about</a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="#" class="menu-nav__link">gallery</a>
+        </li>
+      </ul>
+    </div>
+    <script defer src="./js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

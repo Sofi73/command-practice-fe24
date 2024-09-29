@@ -37,7 +37,7 @@
     (-webkit-min-device-pixel-ratio: 192),
     (-o-min-device-pixel-ratio: 192/1),
     (min-resolution: 192dppx) {
-    background-image: url("../../images/hero-bkg-mobile@2x.jpg");
+    background-image: url("../images/hero-bkg-mobile@2x.jpg");
   }
 
   @media (min-width: 1200px) {
@@ -50,7 +50,7 @@
       (-webkit-min-device-pixel-ratio: 192),
       (-o-min-device-pixel-ratio: 192/1),
       (min-resolution: 192dppx) {
-      background-image: url("../../images/hero-bkg-desktop@2x.jpg");
+      background-image: url("../images/hero-bkg-desktop@2x.jpg");
     }
   }
   &__title {

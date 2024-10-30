@@ -6,7 +6,7 @@
   }
 }
 .articles {
-  background-image: url("../../images/articles-bg@1x.jpg");
+  background-image: url("./images/articles-bg@1x.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,7 +16,7 @@
     (-o-min-device-pixel-ratio: 2/1),
     (min-resolution: 2dppx),
     (min-resolution: 192dpi) {
-    background-image: url("../../images/articles-bg@2x.jpg");
+    background-image: url("./images/articles-bg@2x.jpg");
   }
 }
 
